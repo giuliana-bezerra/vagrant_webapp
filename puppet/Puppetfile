@@ -1,0 +1,25 @@
+moduledir 'modules'
+
+mod 'tomcat',
+:git => 'https://github.com/puppetlabs/puppetlabs-tomcat.git'
+
+mod 'stdlib',
+:git => 'https://github.com/puppetlabs/puppetlabs-stdlib.git'
+
+mod 'staging',
+:git => 'https://github.com/nanliu/puppet-staging.git'
+
+mod 'archive',
+:git => 'https://github.com/voxpupuli/puppet-archive'
+
+mod 'java8',
+:git => 'https://github.com/Spantree/puppet-java8.git'
+
+mod 'apt',
+:git => 'https://github.com/puppetlabs/puppetlabs-apt.git'
+
+mod 'postgresql',
+:git => 'https://github.com/puppetlabs/puppetlabs-postgresql.git'
+
+mod 'concat',
+:git => 'https://github.com/puppetlabs/puppetlabs-concat.git'

@@ -1,0 +1,60 @@
+profile::tomcat::war_source:    '/vagrant/files/gip.war'
+profile::postgres::db_user:     'admin'
+profile::postgres::db_password: '123456'
+profile::postgres::database:    'gip'
+profile::postgres::init_script: |
+  CREATE SCHEMA inventario
+  AUTHORIZATION admin;
+
+  CREATE SCHEMA comum
+    AUTHORIZATION admin;
+
+  CREATE SCHEMA pagamento
+    AUTHORIZATION admin;
+
+  CREATE SEQUENCE comum.usuario_seq;
+  ALTER TABLE comum.usuario_seq
+  OWNER TO admin;
+
+  CREATE SEQUENCE comum.pessoa_seq;
+  ALTER TABLE comum.pessoa_seq
+  OWNER TO admin;
+
+  CREATE TABLE comum.pessoa
+  (
+    id bigint NOT NULL,
+    cpf bigint,
+    nome character varying(255),
+    CONSTRAINT pessoa_pkey PRIMARY KEY (id)
+  )
+  WITH (
+    OIDS=FALSE
+  );
+  ALTER TABLE comum.pessoa
+    OWNER TO admin;
+
+  CREATE TABLE comum.usuario
+  (
+    id bigint NOT NULL,
+    login character varying(255),
+    perfil_acesso character varying(255),
+    senha character varying(255),
+    id_pessoa bigint,
+    CONSTRAINT usuario_pkey PRIMARY KEY (id),
+    CONSTRAINT fk_9wnw55sajbeqbpd8fsjbna1ie FOREIGN KEY (id_pessoa)
+        REFERENCES comum.pessoa (id) MATCH SIMPLE
+        ON UPDATE NO ACTION ON DELETE NO ACTION
+  )
+  WITH (
+    OIDS=FALSE
+  );
+  ALTER TABLE comum.usuario
+    OWNER TO admin;
+
+  INSERT INTO comum.pessoa(
+              id, cpf, nome)
+      VALUES (nextval('comum.pessoa_seq'), 11111111111, 'ADMIN');
+
+  INSERT INTO comum.usuario(
+              id, login, perfil_acesso, senha, id_pessoa)
+      VALUES (nextval('comum.usuario_seq'), 'admin', 'ADMINISTRADOR', '5ebe2294ecd0e0f08eab7690d2a6ee69', (select (id) from comum.pessoa where cpf = 11111111111));
