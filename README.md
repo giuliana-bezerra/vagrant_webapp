@@ -55,7 +55,7 @@ database initialization scripts. For this purpose, change hiera variables in
 `common.yaml`. Vagrant_webapp adopts the roles and profiles pattern, therefore the only
 code needed inside the node declaration is the role import.
 
-After `vagrant up`, your web application will be available on the following url: http://58.147.128.1:8080/<war file name>.
+After `vagrant up`, your web application will be available on the following url: http://58.147.128.1:8080/gip (gip is the war file name).
 IP address can be changed in Vagrantfile.
 
 ## Reference
