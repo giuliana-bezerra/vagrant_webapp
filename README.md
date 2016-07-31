@@ -14,7 +14,7 @@ This module deploys a web application using Tomcat server and Postgres database.
 It manages only required resources for deploying web applications.
 
 ## Setup
-This module depends ons:
+This module depends on:
 
 Softwares:
 - Vagrant
