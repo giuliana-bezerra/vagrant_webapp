@@ -23,14 +23,14 @@ Softwares:
 - Puppet (3.7.2 or higher)
 
 Modules:
-1. [tomcat](https://github.com/puppetlabs/puppetlabs-tomcat.git)
-2. [stdlib](https://github.com/puppetlabs/puppetlabs-stdlib.git)
-3. [staging](https://github.com/nanliu/puppet-staging.git)
-4. [archive](https://github.com/voxpupuli/puppet-archive)
-5. [java8](https://github.com/Spantree/puppet-java8.git)
-6. [apt](https://github.com/puppetlabs/puppetlabs-apt.git)
-7. [postgresql](https://github.com/puppetlabs/puppetlabs-postgresql.git)
-8. [concat](https://github.com/puppetlabs/puppetlabs-concat.git)
+- [tomcat](https://github.com/puppetlabs/puppetlabs-tomcat.git)
+- [stdlib](https://github.com/puppetlabs/puppetlabs-stdlib.git)
+- [staging](https://github.com/nanliu/puppet-staging.git)
+- [archive](https://github.com/voxpupuli/puppet-archive)
+- [java8](https://github.com/Spantree/puppet-java8.git)
+- [apt](https://github.com/puppetlabs/puppetlabs-apt.git)
+- [postgresql](https://github.com/puppetlabs/puppetlabs-postgresql.git)
+- [concat](https://github.com/puppetlabs/puppetlabs-concat.git)
 
 
 To use this module, follow these steps:
