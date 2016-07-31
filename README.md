@@ -62,7 +62,7 @@ Classes
 - `profile::tomcat`: Profile responsible for configuring Tomcat
 server by creating an instance of it and deploying the application war file.
 - `profile::postgres`: Profile responsible for configuring Postgres database
-by creating the database using the provided configuration and executing initialization scripts.
+by creating a database using the provided configuration and executing initialization scripts.
 
 Resources:
 - `db_user`: Database user which manages Postgres database.
