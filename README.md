@@ -35,16 +35,16 @@ Modules:
 
 To use this module, follow these steps:
 
-1. Clone the repository:
+- Clone the repository:
 ```Puppet
 git clone https://github.com/giuliana-bezerra/vagrant_webapp.git
-```
-2. Download dependencies using r10k:
+``` 
+- Download dependencies using r10k:
 ```Puppet
 cd puppet
 r10k puppetfile install
 ```
-3. Initialize vagrant (Vagrantfile directory):
+- Initialize vagrant (Vagrantfile directory):
 ```Puppet
 vagrant up
 ```
@@ -52,7 +52,7 @@ vagrant up
 ## Usage
 This module deploys a web application, so you have to provide a war file and
 database initialization scripts. For this purpose, change hiera variables in
-`common.yaml`. The module adopts the roles and profiles pattern, therefore the only
+`common.yaml`. Vagrant_webapp adopts the roles and profiles pattern, therefore the only
 code needed inside the node declaration is the role import.
 
 ## Reference
